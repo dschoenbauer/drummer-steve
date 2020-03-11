@@ -1,0 +1,18 @@
+.lessonsContent{
+    display: grid;
+    grid-gap: 1em;
+
+    grid-template-areas: 'intro mstudio' 'intro ystudio';
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 3fr 1fr ;
+}
+
+.intro{
+    grid-area: intro;
+}
+.mstudio{
+    grid-area: mstudio;
+}
+.ystudio{
+    grid-area: ystudio;
+}

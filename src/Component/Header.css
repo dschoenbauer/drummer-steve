@@ -1,0 +1,79 @@
+@import '../App.css';
+  
+
+.title {
+    color: var(--white);
+    margin: 0;
+    grid-area: title;
+    justify-content: flex-start;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.callToAction {
+    grid-area: callToAction;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header a,.header a:visited {
+    color: var(--white);
+    background-color: var(--blackT);
+    font-size: larger;
+    text-decoration: none;
+    margin: 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header {
+
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    display: grid;
+    grid-template-areas: 'nav callToAction';
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 200px;
+}
+
+@media screen and (max-width: 1333px) {
+    .guttered {
+        margin: 0;
+    }
+    .header {
+        grid-template-areas: 'title callToAction' 'nav nav';
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    }
+    .header{
+        text-align: center;
+    }
+    .callToAction{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .guttered {
+        margin: 0;
+    }
+    .callToAction{
+        justify-content: center;
+    }
+    .header {
+        grid-template-areas: 'title' 'nav' 'callToAction';
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
