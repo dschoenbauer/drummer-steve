@@ -1,0 +1,18 @@
+.historyContent{
+    display: grid;
+    grid-gap: 1em;
+
+    grid-template-areas: 'history topAlbums' 'history topRecordings';
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 3fr 1fr ;
+}
+
+.history{
+    grid-area: history;
+}
+.topAlbums{
+    grid-area: topAlbums;
+}
+.topRecordings{
+    grid-area: topRecordings;
+}
